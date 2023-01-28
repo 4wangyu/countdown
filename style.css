@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'digital-clock-font';
+  src: url('digital-7-mono.ttf');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#countdown {
+  color: #464646;
+  font-size: 15vw;
+  font-family: 'digital-clock-font';
+}
+
+#setting {
+  position: fixed;
+  bottom: 0;
+  font-size: 3vw;
+}
+
+#setting:hover {
+  color: #646464;
+}
+
+#enddate {
+  color: inherit;
+  background-color: inherit;
+  border: inherit;
+  font-size: inherit;
+}
+
+#enddate:focus {
+  background: #646464;
+  color: #fff;
+  outline: none;
+}
