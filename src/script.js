@@ -1,13 +1,24 @@
 const countdown = document.querySelector('#countdown');
 const dateInput = document.querySelector('#enddate');
 
-chrome.storage.sync.get(['enddate']).then((result) => {
-  dateInput.value = result.enddate || '';
-});
+// browser is supported by Firefox while chrome is for Chrome. window.browser is undefined in Chrome.
+if (window.browser) {
+  browser.storage.sync.get(['enddate']).then((result) => {
+    dateInput.value = result.enddate || '';
+  });
 
-dateInput.oninput = function () {
-  chrome.storage.sync.set({ enddate: this.value });
-};
+  dateInput.oninput = function () {
+    browser.storage.sync.set({ enddate: this.value });
+  };
+} else {
+  chrome.storage.sync.get(['enddate']).then((result) => {
+    dateInput.value = result.enddate || '';
+  });
+
+  dateInput.oninput = function () {
+    chrome.storage.sync.set({ enddate: this.value });
+  };
+}
 
 setInterval(() => {
   const endDate = new Date(dateInput.value);
