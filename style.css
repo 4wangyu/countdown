@@ -34,7 +34,7 @@ body {
 }
 
 #setting:hover {
-  color: #646464;
+  color: #464646;
 }
 
 #enddate {
@@ -45,7 +45,7 @@ body {
 }
 
 #enddate:focus {
-  background: #646464;
+  background: #464646;
   color: #fff;
   outline: none;
 }
