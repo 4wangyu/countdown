@@ -9,5 +9,5 @@ Three-Body countdown in your browser new tab.
 
 [chrome_link]: https://chrome.google.com/webstore/detail/countdown/agkpjbinhffcipnofnpaelmellflhacl
 [chrome_badge]: ./chrome-badge.png
-[firefox_link]: https://addons.mozilla.org/en-US/firefox/addon/three-body-countdown
+[firefox_link]: https://addons.mozilla.org/firefox/addon/three-body-countdown
 [firefox_badge]: ./firefox-badge.png
